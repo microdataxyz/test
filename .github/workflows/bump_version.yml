@@ -26,6 +26,9 @@ jobs:
         with:
           commit-message: Bump version to ${{ inputs.version }}
           committer: Microdata Bot <microdataxyz@outlook.com>
+          title: Bump version to ${{ inputs.version }}
+          body: Bump version by ${{ github.actor }}
+
       - name: Check outputs
         if: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
